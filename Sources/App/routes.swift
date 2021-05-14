@@ -8,4 +8,11 @@ func routes(_ app: Application) throws {
     app.get("hello") { req -> String in
         return "Hello, world!"
     }
+    
+    let apis = app.grouped("api")
+    
+    apis.get("stores") { req -> String in
+        
+        return "キャッシュレスはSTORES決済！"
+    }
 }
